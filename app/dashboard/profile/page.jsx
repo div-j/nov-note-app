@@ -1,7 +1,10 @@
+import { Button } from '@/components/ui/button'
 import React from 'react'
 
 export default function page() {
   return (
-    <div>profle</div>
+    <div>
+      <Button>Sign out</Button>
+    </div>
   )
 }

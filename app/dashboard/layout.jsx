@@ -1,10 +1,16 @@
-import Sidebar from "../components/SideBar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "../components/SideBar";
 
 export default function BlogLayout({ children }) {
   return (
-    <section className="flex gap-4">
-      <Sidebar/>
-      <main className="mt-4">{children}</main>
-    </section>
+    <SidebarProvider>
+      <AppSidebar/>
+ 
+      <main className="mt-4">
+    <SidebarTrigger />
+        {children}
+        </main>
+
+    </SidebarProvider>
   );
 }
